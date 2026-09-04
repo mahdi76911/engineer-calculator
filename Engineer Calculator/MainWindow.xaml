@@ -1,0 +1,40 @@
+﻿<Window x:Name="Main" x:Class="Engineer_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engineer_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="728.837" Width="318.792" Closed="Main_Closed">
+    <Grid>
+        <TextBox x:Name="Input" HorizontalAlignment="Left" Height="101" Margin="14,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="283" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" FontSize="14" KeyDown="Input_KeyDown" TextChanged="Input_TextChanged"/>
+        <Button x:Name="SumB" Content="+" HorizontalAlignment="Left" Margin="230,494,0,0" VerticalAlignment="Top" Width="67" Click="SumB_Click" FontSize="48" IsEnabled="False"/>
+        <Button x:Name="GameButton" Content="Game" HorizontalAlignment="Left" Margin="14,278,0,0" VerticalAlignment="Top" Width="67" Click="GameButton_Click" Height="67" FontSize="22"/>
+        <TextBox x:Name="Input2" HorizontalAlignment="Left" Height="26" Margin="14,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" FontSize="14" KeyDown="Input2_KeyDown" TextChanged="Input2_TextChanged"/>
+        <Button x:Name="GraphButton" Content="Graph" HorizontalAlignment="Left" Margin="14,566,0,0" VerticalAlignment="Top" Width="67" Click="GraphButton_Click" Height="67" FontSize="22"/>
+        <TextBox x:Name="Result" HorizontalAlignment="Left" Height="88" Margin="14,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="283" IsEnabled="False" VerticalScrollBarVisibility="Auto" TextChanged="Result_TextChanged" FontSize="14" AcceptsReturn="True"/>
+        <Button x:Name="BN1" Content="1" HorizontalAlignment="Left" FontSize="48" Margin="14,494,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN2" Content="2" HorizontalAlignment="Left" FontSize="48" Margin="86,494,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN3" Content="3" HorizontalAlignment="Left" FontSize="48" Margin="158,494,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN4" Content="4" HorizontalAlignment="Left" FontSize="48" Margin="14,422,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN5" Content="5" HorizontalAlignment="Left" FontSize="48" Margin="86,422,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN6" Content="6" HorizontalAlignment="Left" FontSize="48" Margin="158,422,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN7" Content="7" HorizontalAlignment="Left" FontSize="48" Margin="14,350,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN8" Content="8" HorizontalAlignment="Left" FontSize="48" Margin="86,350,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN9" Content="9" HorizontalAlignment="Left" FontSize="48" Margin="158,350,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="BN0" Content="0" HorizontalAlignment="Left" FontSize="48" Margin="86,566,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click" Height="67"/>
+        <Button x:Name="Dot" Content="." HorizontalAlignment="Left" FontSize="48" Margin="158,566,0,0" VerticalAlignment="Top" Width="67" Click="NumbersButton_Click"/>
+        <Button x:Name="CrossB" Content="×" HorizontalAlignment="Left" Margin="230,350,0,0" VerticalAlignment="Top" Width="67" FontSize="48" Click="CrossB_Click" IsEnabled="False"/>
+        <Button x:Name="DivB" Content="÷" HorizontalAlignment="Left" Margin="230,278,0,0" VerticalAlignment="Top" Width="67" FontSize="48" Click="DivB_Click" IsEnabled="False"/>
+        <Button x:Name="SubB" Content="-" HorizontalAlignment="Left" Margin="230,422,0,0" VerticalAlignment="Top" Width="67" FontSize="48" Click="SubB_Click" IsEnabled="False"/>
+        <Button x:Name="FactB" Content="!" HorizontalAlignment="Left" Margin="158,278,0,0" VerticalAlignment="Top" Width="67" FontSize="48" Click="FactB_Click" IsEnabled="False"/>
+        <Button x:Name="CEB" Content="C" HorizontalAlignment="Left" Margin="86,278,0,0" VerticalAlignment="Top" Width="67" FontSize="48" Click="CEB_Click"/>
+        <Button x:Name="SortB" Content="Sort" HorizontalAlignment="Left" Margin="230,566,0,0" VerticalAlignment="Top" Width="67" Height="68" IsEnabled="False" FontSize="30" Click="SortB_Click"/>
+        <Button x:Name="DevB" Content="Derivative" HorizontalAlignment="Left" Margin="14,638,0,0" VerticalAlignment="Top" Width="139" Click="DevB_Click" FontSize="30"/>
+        <Button x:Name="PrintB" Content="File" HorizontalAlignment="Left" Margin="158,639,0,0" VerticalAlignment="Top" Width="139" Height="42" FontSize="30" Click="PrintB_Click"/>
+        <RadioButton x:Name="BIB" Content="BigInteger" HorizontalAlignment="Left" Margin="21,248,0,0" VerticalAlignment="Top" Checked="BIB_Checked" IsChecked="True"/>
+        <RadioButton x:Name="BDB" Content="BigDouble" HorizontalAlignment="Left" Margin="108,248,0,0" VerticalAlignment="Top" Checked="BDB_Checked"/>
+        <RadioButton x:Name="BCB" Content="BigComplex" HorizontalAlignment="Left" Margin="201,248,0,0" VerticalAlignment="Top" Checked="BCB_Checked"/>
+
+    </Grid>
+</Window>

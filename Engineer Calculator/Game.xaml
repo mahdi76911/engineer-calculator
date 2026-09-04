@@ -1,0 +1,86 @@
+﻿<Window x:Name="GameWindow" x:Class="Engineer_Calculator.Game"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Engineer_Calculator"
+        mc:Ignorable="d"
+        Title="Game" Height="447.881" Width="287.332" Visibility="Visible" Closed="GameWindow_Closed" ResizeMode="NoResize" Background="#FF434B89" Loaded="GameWindow_Loaded">
+    <Grid x:Name="FirstGrid">
+        <Label x:Name="ScoreL" Content="0" Margin="51,28,51.4,0" VerticalAlignment="Top" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Width="168"/>
+        <Image x:Name="SettingB" Height="36" Margin="224,10,0,0" VerticalAlignment="Top" Source="Files/Settings Icon.png" MouseLeftButtonDown="SettingB_MouseLeftButtonDown" HorizontalAlignment="Left" Width="36"/>
+        <Image x:Name="StatB" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Source="Files/Play Icon.ico" MouseLeftButtonDown="StatB_MouseLeftButtonDown" Height="36" Width="36"/>
+        <Label x:Name="OperatorL" Content="Operator: +" Margin="158,364,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18"/>
+        <Label x:Name="LevelL" Content="Leve 1" HorizontalAlignment="Left" Margin="113,2,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="HintNext" Content="?" HorizontalAlignment="Left" Height="40" Margin="27,357,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="20" BorderBrush="Black" BorderThickness="1" FontFamily="Times New Roman" Background="GreenYellow"/>
+        <Grid x:Name="GameGrid" HorizontalAlignment="Left" Height="280" Margin="10,59,0,0" VerticalAlignment="Top" Width="252" Background="#FF88A5DF">
+            <!-- <Label x:Name="Answer1" Content="?" HorizontalAlignment="Left" Height="40" Margin="0,240,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGreen" FontSize="20" BorderBrush="Black" BorderThickness="1" FontFamily="Times New Roman"/>
+            <Label x:Name="Answer2" Content="?" HorizontalAlignment="Left" Height="40" Margin="84,240,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGreen" FontSize="20" BorderBrush="Black" BorderThickness="1" FontFamily="Times New Roman"/>
+            <Label x:Name="Answer3" Content="?" HorizontalAlignment="Left" Height="40" Margin="168,240,0,0" VerticalAlignment="Top" Width="84" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="LightGreen" FontSize="20" BorderBrush="Black" BorderThickness="1" FontFamily="Times New Roman"/>
+            -->
+            <!--            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            -->
+        </Grid>
+
+        <!-- Settings InputBox -->
+        <Grid x:Name="SettingBox" Visibility="Collapsed">
+            <Grid Background="Black" Opacity="0.5"/>
+            <Border
+            MinWidth="200"
+            Background="Khaki" 
+            BorderBrush="Black"
+            BorderThickness="1" 
+            CornerRadius="50,50,50,50" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" Height="285">
+                <StackPanel>
+                    <Button x:Name="ExitSB" Content="X" Width="20" Background="{x:Null}" FontSize="20" Margin="140,10,0,0" BorderBrush="{x:Null}" Click="ExitSB_Click"/>
+                    <Label x:Name="SettingsL" HorizontalContentAlignment="Center" FontSize="20" Margin="0,-10,0,0" Content="Settings"/>
+                    <Label x:Name="CNunberLabel" HorizontalContentAlignment="Center" FontSize="14" Content="Columns Number:"/>
+                    <Slider x:Name="CNumberSlider" Width="143" Maximum="3" Minimum="1" SmallChange="1" ValueChanged="CNumberSlider_ValueChanged"/>
+                    <Label x:Name="RSpeedL" HorizontalContentAlignment="Center" FontSize="14" Content="Release Interval(ms):"/>
+                    <Slider x:Name="RSpeedSlider" Width="143" Minimum="4" IsDirectionReversed="True" ValueChanged="RSpeedSlider_ValueChanged" Value="10" SmallChange="1" Maximum="15"/>
+                    <Label x:Name="OperatorLS" HorizontalContentAlignment="Center" FontSize="14" Content="Operator:"/>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <RadioButton x:Name="PlusR" Content="+" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" IsChecked="True" Checked="PlusR_Checked"/>
+                        <RadioButton x:Name="MinusR" Content="-" FontSize="20" Margin="20,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Checked="MinusR_Checked"/>
+                        <RadioButton x:Name="CrossR" Content="*" FontSize="20" Margin="20,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Checked="CrossR_Checked"/>
+                        <RadioButton x:Name="DivR" Content="/" FontSize="20" Margin="20,0,0,0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Checked="DivR_Checked"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Label x:Name="NILenghtL" HorizontalContentAlignment="Center" FontSize="14" Content="Int Lenght: "/>
+                        <ComboBox x:Name="ILComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" SelectionChanged="ILComboBox_SelectionChanged" SelectedIndex="1">
+                            <Label x:Name="IL1" Content="1"/>
+                            <Label x:Name="IL2" Content="2"/>
+                            <Label x:Name="IL3" Content="3"/>
+                        </ComboBox>
+                        <Label x:Name="NDLenghtL" HorizontalContentAlignment="Center" FontSize="14" Content="Dec Lenght: "/>
+                        <ComboBox x:Name="DLComboBox" HorizontalAlignment="Left" VerticalAlignment="Top" Width="34" SelectionChanged="DLComboBox_SelectionChanged" SelectedIndex="2">
+                            <Label x:Name="DL0" Content="0"/>
+                            <Label x:Name="DL1" Content="1"/>
+                            <Label x:Name="DL2" Content="2"/>
+                            <Label x:Name="DL3" Content="3"/>
+                        </ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                        <Button x:Name="SaveB" Content="Save" Width="63" Background="{x:Null}" FontSize="20" BorderBrush="{x:Null}" Click="SaveB_Click"/>
+                        <Button x:Name="LoadB" Content="Load" Width="63" Background="{x:Null}" FontSize="20" BorderBrush="{x:Null}" Click="LoadB_Click"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

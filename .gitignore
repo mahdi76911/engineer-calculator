@@ -1,0 +1,61 @@
+# ---- .NET / Visual Studio ----
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# VS caches
+.vs/
+*.ipch
+*.aps
+*.pch
+*.aps
+*.idb
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.tlog
+*.obj
+*.exp
+*.lib
+*.manifest
+
+# NuGet (restore on build)
+packages/
+*.nupkg
+*.nuget.props
+*.nuget.targets
+
+# Build output / deploy
+*.deploy
+*.msi
+*.p7s
+publish/
+
+# Large media / source archives (restore locally, don't commit)
+*.rar
+*.zip
+*.mkv
+*.mp4
+*.crypt
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
