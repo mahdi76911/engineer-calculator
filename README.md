@@ -13,6 +13,12 @@ Built in C# as a WPF application.
 - **UI:** WPF with custom-drawn graph surface
 - **Assets:** play/pause/settings icons + a brick-pattern sample image
 
+
+## Screenshot
+![Engineer Calculator](docs/screenshot.png)
+
+_BigInteger mode: 12345 + 6789 = 19134_
+
 ## Building
 - **Visual Studio 2019+**, targets an older .NET Framework.
 - Open `Engineer Calculator.sln` and build.
