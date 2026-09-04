@@ -4,7 +4,7 @@ A WPF utility combining three tools in one app:
 
 - **Scientific/engineer calculator**
 - **Graph plotter** — draws function curves (`GraphForm`)
-- **Game** — a small matematical bundled game screen
+- **Game** — a small mathematical bundled game screen
 
 Built in C# as a WPF application.
 
